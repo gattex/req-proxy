@@ -7,7 +7,7 @@ var app = express();
 app.use(cors())
 
 app.use('/', function(req, res) {  
-  var url = 'https://boehringer-ingelheim-us-dev.us-dev.janraincapture.com/' + req.url;
+  var url = null;
   console.log(url);
   req.pipe(request(url)).pipe(res);
 });
